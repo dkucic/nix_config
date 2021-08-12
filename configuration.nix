@@ -81,9 +81,11 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
      file
+     bashCompletion
      python3Full
      neovim
      firefox
+     firejail
      tmux
      git
      vlc
@@ -101,6 +103,8 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  security.apparmor.enable = true;
 
   # List services that you want to enable:
   # Enable the OpenSSH daemon.
